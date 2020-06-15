@@ -32,14 +32,26 @@
 
                         </li>
                     </ul>
-                    <button class="btn clear-button" type="button" id="clear-history"></button>
+                    <button class="btn clear-button" type="button" id="clear-history"> Clear History</button>
                 </form>
             </div>
             <div class="col-8 mb-5 city border">
                 <div class="current-city">
-                    <h5 id="city-name"></h5> <span id="weather-icon"></span>
+                    <h5 id="city-name" class="cityName bg-light"></h5> <span id="weather-icon"></span>
                     <div class="city-info ">
-                        <ul class="forecast-info">
+                        <ul class="forecast-info" style="list-style-type:none;">
+                            <li id="temp">
+                                
+                            </li>
+                            <li id="humidity">
+
+                            </li>
+                            <li id="wind-speed">
+
+                            </li>
+                            <li id="uv-index">
+
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -48,23 +60,22 @@
         <div class="row">
             <div class="5dayforecast col-12 mb-5">
                 <h5 id="forecast-title" class=""> 5 Day Forecast </h5>
-                <div class="">
-                    <ul style="list-style-type:none;">
-                        <li id="1" class="">
+                <div>
+                    <ul class="row card" style="list-style-type:none;">
+                        <li id="list1" class="card-body">
+
+                        <li id="list2" class="card-body">
                                 
                         </li>
-                        <li id="2" class="">
+                        <li id="list3" class="card-body">
+                    </ul>
+                    <ul class="row card" style="list-style-type:none;">
+                        <li id="list1a" class="card-body">
+
+                        <li id="list2a" class="card-body">
                                 
                         </li>
-                        <li id="3" class="">
-                                
-                        </li>
-                        <li id="4" class="">
-                                
-                        </li>
-                        <li id="5" class="">
-                                
-                        </li>
+                        <li id="list3a" class="card-body">
                     </ul>
                 </div>
             </div>
