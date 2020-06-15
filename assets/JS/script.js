@@ -20,13 +20,20 @@ var getCityInfo = function () {
 
         currentWeather(response);
         forecast(response);
+        historyTime();
 
         setStorage();
       })
 }
 
+var historyTime = function() {
+    var historyList = $("<li>").addClass("list-group-item col-5").text(city);
+    $("#history").append(historyList);
+}
+
 var currentWeather = function (response){
     console.log(response);
+    $("#city-name").append(city + ":  " + response.location.localtime);
     $("#temp").text("Temperature:  ").append(response.current.temp_f);
     $("#humidity").text("Humidity:  ").append(response.current.humidity);
     $("#wind-speed").text("Wind Speed:  ").append(response.current.wind_mph);
@@ -53,27 +60,15 @@ var forecast = function (response){
             var newDate = $("<h5>").addClass("card-header").append(date);
             var newTemp = $("<p>").addClass("card-text").text("Temperature:  ").append(temp);
             var newHumidity =$("<p>").addClass("card-text").text("Humidity:  ").append(humidity);
-            var weatherIcon = $("<img>")
+            var weatherIcon = $("<img>").attr("src","https://www.weatherapi.com/docs/weather_conditions.json"+ response.forecast.forecastday[i].day.condition.icon);
 
-            newCardBody.append(newDate, newTemp, newHumidity);
+            newCardBody.append(newDate, newTemp, newHumidity, weatherIcon);
             newCard.append(newCardBody);
             $("#forecast-start").append(newCard);
 
         }
-        //$("#list1").append(response.forecast.forecastday[0].date);
-       //$("#list2").text("temperature:  ").append(response.forecast.forecastday[0].day.avgtemp_f);
-        //$("#list3").text("Humidity:  ").append(response.forecast.forecastday[0].day.avghumidity);
-
-       //$("#list1a").append(response.forecast.forecastday[1].date);
-        //$("#list2a").text("temperature:  ").append(response.forecast.forecastday[1].day.avgtemp_f);
-        //$("#list3a").text("Humidity:  ").append(response.forecast.forecastday[1].day.avghumidity);
-
-
     })
 }
-
-
-
 
 var setStorage = function () {
     localStorage.setItem('city', JSON.stringify(city));
