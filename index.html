@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../weather-dashboard/assets/CSS/style.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header class="weather-banner col-12">
+        <h1 class="text-center" id="main-title"> Weather Dashboard</h1>
+    </header>
+
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-4 mb-5 bg-light">
+                <h3 class=""> Search For a City: </h3>
+                <form class="" id="city-form">
+                    <div class="input-group mb-3">
+                        <input type="text" placeholder="Enter City Here" id="input">
+                        <button class="btn search-button" type="button" id="start-search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <form class=" search-history" id="history">
+                    <ul style="list-style-type:none;">
+                        <li class="city-history">
+
+                        </li>
+                    </ul>
+                    <button class="btn clear-button" type="button" id="clear-history"></button>
+                </form>
+            </div>
+            <div class="col-8 mb-5 city border">
+                <div class="current-city">
+                    <h5 id="city-name"></h5> <span id="weather-icon"></span>
+                    <div class="city-info ">
+                        <ul class="forecast-info">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="5dayforecast col-12 mb-5">
+                <h5 id="forecast-title" class=""> 5 Day Forecast </h5>
+                <div class="">
+                    <ul style="list-style-type:none;">
+                        <li id="1" class="">
+                                
+                        </li>
+                        <li id="2" class="">
+                                
+                        </li>
+                        <li id="3" class="">
+                                
+                        </li>
+                        <li id="4" class="">
+                                
+                        </li>
+                        <li id="5" class="">
+                                
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../weather-dashboard/assets/JS/script.js"></script>
+</body>
+</html>

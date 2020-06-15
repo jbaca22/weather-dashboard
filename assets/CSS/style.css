@@ -1,0 +1,21 @@
+
+.weather-banner {
+    border: solid;
+    border-color: dimgrey;
+    background-color: dimgrey;
+}
+
+#main-title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+}
+
+.btn {
+    color: white;
+    background-color: dodgerblue;
+    border-radius: 3px;
+    border-color: dodgerblue;
+    border-style: solid;
+}
+
+
