@@ -22,3 +22,7 @@
     font-family: fantasy;
     font-size: x-large;
 }
+
+.card-body {
+    background-color: dodgerblue;
+}
